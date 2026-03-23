@@ -1,0 +1,281 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, "JetBrains Mono", monospace;
+
+  --color-dark: #0a0a0a;
+  --color-dark-light: #111111;
+  --color-dark-card: #161616;
+  --color-dark-border: #222222;
+  --color-accent: #3b82f6;
+  --color-accent-dim: #2563eb;
+  --color-accent-glow: rgba(59, 130, 246, 0.15);
+  --color-text-primary: #e5e5e5;
+  --color-text-secondary: #888888;
+  --color-text-muted: #555555;
+  --color-terminal-green: #4ade80;
+  --color-terminal-dim: #22c55e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #333 #0a0a0a;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #e5e5e5;
+  overflow-x: hidden;
+}
+
+/* Grain texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Terminal cursor blink */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.terminal-cursor::after {
+  content: "█";
+  animation: blink 1s step-end infinite;
+  color: #4ade80;
+  margin-left: 2px;
+}
+
+/* Typewriter effect */
+@keyframes typewriter {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 0;
+  animation: typewriter 0.8s steps(30) forwards;
+}
+
+.typewriter-delay-1 {
+  animation-delay: 0.3s;
+}
+.typewriter-delay-2 {
+  animation-delay: 0.6s;
+}
+.typewriter-delay-3 {
+  animation-delay: 0.9s;
+}
+.typewriter-delay-4 {
+  animation-delay: 1.2s;
+}
+.typewriter-delay-5 {
+  animation-delay: 1.8s;
+}
+.typewriter-delay-6 {
+  animation-delay: 2.1s;
+}
+.typewriter-delay-7 {
+  animation-delay: 2.4s;
+}
+
+/* Scroll reveal animations */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes reveal-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.visible {
+  animation: reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.reveal-left {
+  opacity: 0;
+}
+
+.reveal-left.visible {
+  animation: reveal-left 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.reveal-scale {
+  opacity: 0;
+}
+
+.reveal-scale.visible {
+  animation: reveal-scale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Stagger children */
+.stagger-children.visible > * {
+  opacity: 0;
+  animation: reveal-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.stagger-children.visible > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger-children.visible > *:nth-child(2) { animation-delay: 0.1s; }
+.stagger-children.visible > *:nth-child(3) { animation-delay: 0.15s; }
+.stagger-children.visible > *:nth-child(4) { animation-delay: 0.2s; }
+.stagger-children.visible > *:nth-child(5) { animation-delay: 0.25s; }
+.stagger-children.visible > *:nth-child(6) { animation-delay: 0.3s; }
+.stagger-children.visible > *:nth-child(7) { animation-delay: 0.35s; }
+.stagger-children.visible > *:nth-child(8) { animation-delay: 0.4s; }
+.stagger-children.visible > *:nth-child(9) { animation-delay: 0.45s; }
+.stagger-children.visible > *:nth-child(10) { animation-delay: 0.5s; }
+
+/* Glow effect for accent elements */
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15), 0 0 60px rgba(59, 130, 246, 0.05);
+}
+
+/* Timeline line gradient */
+.timeline-line {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #3b82f6 10%,
+    #3b82f6 90%,
+    transparent
+  );
+}
+
+/* Card hover shine effect */
+.card-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(59, 130, 246, 0.03),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.card-shine:hover::before {
+  left: 100%;
+}
+
+/* Nav blur backdrop */
+.nav-blur {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: #fff;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Smooth link underline */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
