@@ -42,7 +42,7 @@ export const translations = {
         {
           company: "Soft Live / Instituto Amazon Innovare",
           role: "Desenvolvedor Backend Pleno",
-          period: "mai/2024 - presente",
+          period: "mai/2024 - mar/2026",
           description:
             "Desenvolvimento de sistemas internos para gestão de campanhas e educação pública (SEMED).",
           tags: ["NestJS", "TypeScript", "PostgreSQL", "Docker"],
