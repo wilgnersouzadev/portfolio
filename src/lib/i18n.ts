@@ -44,7 +44,7 @@ export const translations = {
           role: "Desenvolvedor Backend Pleno",
           period: "mai/2024 - mar/2026",
           description:
-            "Desenvolvimento de sistemas internos para gestão de campanhas e educação pública (SEMED).",
+            "Desenvolvimento de sistemas internos para gestão de campanhas, educação pública, transporte urbano e comunicações (SEMED, IMMU...).",
           tags: ["NestJS", "TypeScript", "PostgreSQL", "Docker"],
         },
         {
@@ -183,7 +183,7 @@ export const translations = {
           role: "Mid Level Backend Developer",
           period: "may/2024 - present",
           description:
-            "Development of internal systems for campaign management and public education (SEMED).",
+            "Development of internal systems for campaign management, public education, urban transport and communications (SEMED, IMMU...).",
           tags: ["NestJS", "TypeScript", "PostgreSQL", "Docker"],
         },
         {
