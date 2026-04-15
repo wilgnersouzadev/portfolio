@@ -44,7 +44,7 @@ export default function About({ lang }: AboutProps) {
         <ScrollReveal delay={400}>
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
-              { value: "4+", label: lang === "pt" ? "Anos de dev" : "Years dev" },
+              { value: "5+", label: lang === "pt" ? "Anos de dev" : "Years dev" },
               { value: "6+", label: lang === "pt" ? "Empresas" : "Companies" },
               { value: "1", label: "SaaS" },
               { value: "10+", label: lang === "pt" ? "Projetos" : "Projects" },
