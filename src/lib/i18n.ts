@@ -15,7 +15,7 @@ export const translations = {
       location: "> Manaus, AM — Brasil",
       description: [
         "> Especializado em arquitetar APIs robustas e sistemas",
-        "> escaláveis. +4 anos transformando requisitos complexos",
+        "> escaláveis. +5 anos transformando requisitos complexos",
         "> em código limpo e performático.",
       ],
       cta1: "Ver Projetos",
@@ -23,9 +23,9 @@ export const translations = {
     },
     about: {
       title: "Sobre mim",
-      p1: "Desenvolvedor Backend de Manaus, Amazonas. Desde 2022 construindo soluções que escalam — de APIs RESTful a arquiteturas multi-tenant completas.",
+      p1: "Desenvolvedor Backend de Manaus, Amazonas. Desde 2021 construindo soluções que escalam — de APIs RESTful a arquiteturas multi-tenant completas.",
       p2: "Meu foco está no ecossistema NestJS, TypeScript e Docker. Já construí um SaaS completo do zero: do design do banco de dados ao deploy em produção, passando por autenticação multi-tenant, pagamentos, PWA e notificações push.",
-      p3: "Antes de migrar para desenvolvimento em 2022, acumulei experiência em TI desde 2015, o que me deu uma base sólida em infraestrutura e resolução de problemas. Atualmente cursando ADS na Anhanguera (2026-2028).",
+      p3: "Antes de migrar para a área de desenvolvimento, acumulei experiência em TI desde 2015, o que me deu uma base sólida em infraestrutura e resolução de problemas. Atualmente cursando ADS na Anhanguera (2026-2028).",
     },
     stack: {
       title: "Tech Stack",
@@ -154,7 +154,7 @@ export const translations = {
       location: "> Manaus, AM — Brazil",
       description: [
         "> Specialized in architecting robust APIs and scalable",
-        "> systems. 4+ years turning complex requirements",
+        "> systems. 5+ years turning complex requirements",
         "> into clean, performant code.",
       ],
       cta1: "View Projects",
@@ -162,9 +162,9 @@ export const translations = {
     },
     about: {
       title: "About me",
-      p1: "Backend Developer from Manaus, Amazonas. Since 2022, building solutions that scale — from RESTful APIs to complete multi-tenant architectures.",
+      p1: "Backend Developer from Manaus, Amazonas. Since 2021, building solutions that scale — from RESTful APIs to complete multi-tenant architectures.",
       p2: "My focus is on the NestJS ecosystem, TypeScript and Docker. I've built a complete SaaS from scratch: from database design to production deployment, including multi-tenant auth, payments, PWA and push notifications.",
-      p3: "Before transitioning to development in 2022, I accumulated IT experience since 2015, which gave me a solid foundation in infrastructure and problem-solving. Currently pursuing a degree in Systems Analysis at Anhanguera (2026-2028).",
+      p3: "Before transitioning to the development area, I accumulated IT experience since 2015, which gave me a solid foundation in infrastructure and problem-solving. Currently pursuing a degree in Systems Analysis at Anhanguera (2026-2028).",
     },
     stack: {
       title: "Tech Stack",

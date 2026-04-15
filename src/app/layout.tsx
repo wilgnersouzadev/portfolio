@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Wilgner Souza — Backend Developer",
   description:
-    "Desenvolvedor Backend especializado em NestJS, TypeScript e arquiteturas escaláveis. +4 anos de experiência construindo APIs robustas e sistemas complexos.",
+    "Desenvolvedor Backend especializado em NestJS, TypeScript e arquiteturas escaláveis. +5 anos de experiência construindo APIs robustas e sistemas complexos.",
   keywords: [
     "Wilgner Souza",
     "Backend Developer",
