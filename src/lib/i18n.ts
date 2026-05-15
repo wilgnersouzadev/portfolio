@@ -40,6 +40,14 @@ export const translations = {
       present: "presente",
       items: [
         {
+          company: "AE Digital",
+          role: "Desenvolvedor Backend Sênior",
+          period: "mai/2026 - presente",
+          description:
+            "Desenvolvimento de APIs e sistemas para o setor imobiliário, com foco em integrações, automações e arquitetura de soluções para gestão de imóveis.",
+          tags: ["NestJS", "TypeScript", "PostgreSQL", "Docker"],
+        },
+        {
           company: "Soft Live / Instituto Amazon Innovare",
           role: "Desenvolvedor Backend Pleno",
           period: "mai/2024 - mar/2026",
@@ -179,9 +187,17 @@ export const translations = {
       present: "present",
       items: [
         {
+          company: "AE Digital",
+          role: "Senior Backend Developer",
+          period: "may/2026 - present",
+          description:
+            "Development of APIs and systems for the real estate sector, focused on integrations, automations and solution architecture for property management.",
+          tags: ["NestJS", "TypeScript", "PostgreSQL", "Docker"],
+        },
+        {
           company: "Soft Live / Instituto Amazon Innovare",
           role: "Mid Level Backend Developer",
-          period: "may/2024 - present",
+          period: "may/2024 - mar/2026",
           description:
             "Development of internal systems for campaign management, public education, urban transport and communications (SEMED, IMMU...).",
           tags: ["NestJS", "TypeScript", "PostgreSQL", "Docker"],
